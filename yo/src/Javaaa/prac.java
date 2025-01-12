@@ -1,20 +1,21 @@
 package Javaaa;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Scanner;
+
 
 public class prac {
-	public static void main(String[]args) {
-		int arr[]= {11,22,22,44,44,55,66,66,};
-		Set<Integer> uset=new HashSet<>();
-		Set<Integer> dset=new HashSet<>();
-		for(int val:arr) {
-			if(!uset.add(val)) { 
-				
-			dset.add(val);
-		}}
-		System.out.println(uset);
+	
+	public static void main (String[]args) {
+		Scanner scanner=new Scanner(System.in);
+		String str=scanner.nextLine();
+		String result="";
+		for(int i=0;i<str.length()-1;i++) {
+			String ch=""+str.charAt(i);
+			if(result.contains(ch) && !ch.equals("")) {
+				continue;
+			}
+			result+=ch;
+		}
 		
-}
-}
-
+		System.out.println(result);
+	}}

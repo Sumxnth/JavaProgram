@@ -3,7 +3,7 @@ package Javaaa;
 public class Vowels {
 	public static void main(String[]args)
 	{
-	String input="smnh";
+	String input="vowe";
 	boolean containsVowels= containsVowel(input);
 	if(containsVowels){
  System.out.println("contains");}

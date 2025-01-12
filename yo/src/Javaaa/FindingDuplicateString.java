@@ -1,23 +1,26 @@
 package Javaaa;
 
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class FindingDuplicateString {
 public static void main(String[]args) {
-	String str="Suumannth";
-	System.out.println(removeDuplicates(str));
-}
-public static String removeDuplicates(String str) {
-	Set<Character> set=new HashSet<>();
-	StringBuilder sb=new StringBuilder();
-	for(int i=0;i<str.length();i++) {
-		Character c=str.charAt(i);
-		if(!set.contains(c)) {
-			set.add(c);
-			sb.append(c);
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Enter a String");
+	String str=scanner.nextLine();
+	System.out.println("Duplicate removed");
+	String result="";
+	for(int i=0;i<str.length()-1;i++) {
+		String ch=""+str.charAt(i);
+		if(result.contains(ch) && !ch.equals(" ")) {
+			continue;
 		}
+		result +=ch;
 	}
-	return sb.toString();
-}
-}
+	System.out.println(result);
+	
+}}
+
+
+//By concatenating "" with the char, Java automatically converts the result to a String.

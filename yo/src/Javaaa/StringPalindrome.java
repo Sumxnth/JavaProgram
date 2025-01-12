@@ -7,11 +7,11 @@ public class StringPalindrome {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter a String");
 		String str=scanner.next();
-		String rev="";
+		String palin="";
 		for(int i=str.length()-1;i>=0;i--) {
-			rev=rev+str.charAt(i);
+			palin=palin+str.charAt(i);
 		}
-		if(str.equals(rev)) {
+		if(str.equals(palin)) {
 			System.out.println("yes its a palindrome");
 		}
 		else {

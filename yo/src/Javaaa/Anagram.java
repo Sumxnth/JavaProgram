@@ -10,15 +10,16 @@ public class Anagram {
 		if(str1.length()!=str2.length()) {
 			return false;
 		}
-		char[]charArray1=str1.toCharArray();
-		char[]charArray2=str2.toCharArray();
-		Arrays.sort(charArray1);
-		Arrays.sort(charArray2);
+		char[]chars1=str1.toCharArray();
+		char[]chars2=str2.toCharArray();
+		Arrays.sort(chars1);
+		Arrays.sort(chars2);
 		
-		return Arrays.equals(charArray1, charArray2);}
+		
+		return Arrays.equals(chars1, chars2);}
 	public static void main(String []args) {
 		String string1="BOW";
-		String string2="WOB";
+		String string2="WB";
 		
 		if(areAnagram(string1, string2)) {
 			System.out.println(string1+" and "+string2+" areanagrams ");}

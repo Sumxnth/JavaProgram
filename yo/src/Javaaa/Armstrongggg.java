@@ -6,15 +6,15 @@ public class Armstrongggg {
 public static void main(String[]args) {
 	Scanner scanner=new Scanner(System.in);
 	System.out.println("Enter a number");
-	int number=scanner.nextInt();
+	int num=scanner.nextInt();
 	scanner.close();
 	
 	int sum=0;
-	int copy=number;
-	while(number!=0) {
-		int rem=number%10;
+	int copy=num;
+	while(num!=0) {
+		int rem=num%10;
 		sum=sum+(rem*rem*rem);
-		number=number/10;
+		num=num/10;
 	}
 	if(copy==sum) 
 		{
@@ -24,3 +24,4 @@ public static void main(String[]args) {
 			System.out.println(sum+"is not armstrong");
 		}
 }}
+
